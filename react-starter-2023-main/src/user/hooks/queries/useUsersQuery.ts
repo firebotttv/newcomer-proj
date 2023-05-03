@@ -6,7 +6,7 @@ const rootKey = "users";
 export const getUsersQueryKey = () => [rootKey];
 
 export const useUsersQuery = () =>
-  useQuery(useUsersQueryKey(), () =>
+  useQuery(getUsersQueryKey(), () =>
     axios
       .get("https://jsonplaceholder.typicode.com/users")
       .then((response) => response.data as User[])

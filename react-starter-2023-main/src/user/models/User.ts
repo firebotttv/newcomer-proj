@@ -22,7 +22,7 @@ export interface User {
   }
 }
 
-export interface UserFactory = (args?: Partial<User>): Post=>{
+export interface UserFactory = (args?: Partial<User>): User=>({
   id: 0,
   name: "Name Surname",
   username: "New User",
@@ -45,4 +45,4 @@ export interface UserFactory = (args?: Partial<User>): Post=>{
     bs: "abcdefgh",
   },
   ...args
-}
+});
